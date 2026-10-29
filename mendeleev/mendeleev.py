@@ -66,7 +66,7 @@ def element(ids: Union[int, str]) -> Element:
         return _get_element(ids)
     else:
         raise ValueError(
-            "Expected a <list>, <tuple>, <str> or <int>, got: {0:s}".format(type(ids))
+            "Expected a <list>, <tuple>, <str> or <int>, got: {0!r}".format(type(ids))
         )
 
 
