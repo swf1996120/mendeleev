@@ -128,7 +128,7 @@ def isotope(symbol_or_atn: Union[str, int], mass_number: int) -> Isotope:
         )
     else:
         raise ValueError(
-            "Expecting a <str> or <int>, got: {0:s}".format(type(symbol_or_atn))
+            "Expecting a <str> or <int>, got: {0!r}".format(type(symbol_or_atn))
         )
 
 
