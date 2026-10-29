@@ -86,7 +86,7 @@ def _get_element(ids) -> Union[Element, List[Element]]:
                 return session.query(Element).filter(Element.name == str(ids)).one()
         elif isinstance(ids, int):
             return session.query(Element).filter(Element.atomic_number == ids).one()
-        raise ValueError("Expecting a <str> or <int>, got: {0:s}".format(type(ids)))
+        raise ValueError("Expecting a <str> or <int>, got: {0!r}".format(type(ids)))
     except sqlalchemy.exc.NoResultFound:
         raise ValueError(f"Element not found: {ids}")
 
